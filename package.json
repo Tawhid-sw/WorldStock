@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -13,6 +13,7 @@
     "@reduxjs/toolkit": "^2.4.0",
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
+    "axios": "^1.7.9",
     "firebase": "^11.0.2",
     "grade-js": "^1.0.10",
     "react": "^18.3.1",
