@@ -1,12 +1,21 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  daisyui: {
+    themes: [],
+  },
   theme: {
     extend: {
       fontFamily: {
         Quicksand: ['"Quicksand", "sans-serif"'],
         Roboto: ["Roboto", "sans-serif"],
         Montserrat: ["Montserrat Alternates", "sans-serif"],
+        RocknRoll: ["RocknRoll One", "sans-serif"],
+      },
+      screens: {
+        lg: "997px",
+        sm: "665px",
+        xsm: "380px",
       },
       colors: {
         // Base Colors
@@ -53,5 +62,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };

@@ -7,10 +7,74 @@
 /* === Font Family ( "Montserrat Alternates", sans-serif ) === */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+/* === Font Family ( "RocknRoll One", sans-serif ) === */
+@import url("https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
   @apply font-Quicksand w-full block box-border min-h-full bg-bgLight text-textPrimary;
+}
+
+img {
+  @apply max-w-full block;
+}
+.fx-row {
+  @apply flex flex-row items-center;
+}
+.tr-drop {
+  @apply transition-all active:scale-90 hover:opacity-85;
+}
+
+.wobble {
+  animation: wobble 0.8s;
+}
+
+@keyframes wobble {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(-10deg);
+  }
+  30% {
+    transform: rotate(10deg);
+  }
+  45% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.rotateL {
+  animation: rorateL 0.3s;
+}
+.rotateR {
+  animation: rotateR 0.3s;
+}
+@keyframes rorateL {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+@keyframes rotateR {
+  0% {
+    transform: rotate(290deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
