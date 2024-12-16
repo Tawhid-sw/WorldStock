@@ -18,7 +18,7 @@ const Navbar = () => {
       Grade(document.querySelectorAll(".gradient-wrap"));
     };
   }, []);
-  const { type, setType } = useContext(DataProvider);
+  const { mediyaType, setMediyaType } = useContext(DataProvider);
   const [isDisplay, setDisplay] = useState(false);
   return (
     <nav className="flex items-center justify-between h-20 gap-4 px-1 py-2 border xsm:px-4 md:px-8">
@@ -60,13 +60,13 @@ const Navbar = () => {
               className="w-24 gap-2 p-0 m-1 text-[1rem] text-gray-600 border-none shadow-none outline-none btn"
             >
               <span className="text-xl">
-                {type === "Photos" ? (
+                {mediyaType === "Photos" ? (
                   <MdOutlineInsertPhoto />
                 ) : (
                   <IoVideocamOutline />
                 )}
               </span>
-              {type}
+              {mediyaType}
             </div>
             <ul
               tabIndex={0}
@@ -75,17 +75,17 @@ const Navbar = () => {
               <li className="gap-2 fx-row">
                 <button
                   onClick={() =>
-                    setType(type === "Photos" ? "Videos" : "Photos")
+                    setMediyaType(mediyaType === "Photos" ? "Videos" : "Photos")
                   }
                 >
                   <span className="text-2xl">
-                    {type === "Videos" ? (
+                    {mediyaType === "Videos" ? (
                       <MdOutlineInsertPhoto />
                     ) : (
                       <IoVideocamOutline />
                     )}
                   </span>
-                  {type === "Photos" ? "Videos" : "Photos"}
+                  {mediyaType === "Photos" ? "Videos" : "Photos"}
                 </button>
               </li>
             </ul>

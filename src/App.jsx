@@ -1,10 +1,14 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 function App() {
   return (
     <>
       <Navbar />
-      <Outlet />
+      <Hero />
+      <main className="block w-full">
+        <Outlet />
+      </main>
     </>
   );
 }
